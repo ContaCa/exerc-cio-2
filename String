@@ -1,0 +1,11 @@
+usuario = input("Digite uma string para ser invertida: ")
+
+
+stringinvertida = ''
+
+
+for caracter in usuario[::-1]:
+    stringinvertida += caracter
+
+
+print("String invertida:", stringinvertida)
