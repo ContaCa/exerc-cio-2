@@ -1,0 +1,28 @@
+def fibonacci(n):
+
+    if n == 0:
+        return [0], False
+    elif n == 1:
+        return [0, 1], True
+
+    sequencia = [0, 1]
+
+    while sequencia[-1] + sequencia[-2] <= n:
+        sequencia.append(sequencia[-1] + 
+        sequencia [-2])
+
+    se_esta = n in sequencia
+
+
+    if not se_esta:
+        return [], False
+    else:
+        return sequencia, True
+
+
+numero = int(input('Insira um número: '))
+sequencia, se_esta = fibonacci(numero)
+
+if sequencia: 
+    print(f"Sequência de Fibonacci para {numero}: {sequencia}")
+print(f"{numero} {'está na sequência de Fibonacci' if se_esta else 'não está na sequência de Fibonacci'}")
